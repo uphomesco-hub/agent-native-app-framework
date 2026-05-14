@@ -1,10 +1,16 @@
 # Agent Native App Framework
 
-Agent Native App Framework is a first-draft SDK for making apps understandable and operable by AI agents.
+Agent Native App Framework is an open-source TypeScript SDK for making apps understandable and operable by AI agents through semantic screens, actions, state, and safety constraints.
 
-Instead of forcing an agent to guess from screenshots, DOM trees, accessibility labels, or brittle coordinates, an app can expose a structured action graph: screens, UI elements, actions, state, navigation targets, and safety constraints.
+Instead of forcing an AI agent to guess from screenshots, DOM trees, accessibility labels, or brittle coordinates, an app can expose a structured action graph: screens, UI elements, actions, state, navigation targets, and permission rules.
+
+This is for developers building agent-native apps, AI automation layers, app-control SDKs, React agent interfaces, Flutter agent interfaces, and cross-app AI workflows.
 
 GitHub: https://github.com/uphomesco-hub/agent-native-app-framework
+
+## Keywords
+
+AI agents, agent-native apps, app automation, semantic UI, action graph, agent SDK, AI app framework, React agents, Flutter agents, mobile agents, cross-app workflows, safe agent actions, computer use, tool use, app control.
 
 ## Why this exists
 
@@ -15,6 +21,26 @@ That is useful, but it is not a stable foundation for serious app automation. Ap
 The goal is simple:
 
 > Make apps agent-operable by design.
+
+## Who this is for
+
+- App developers who want AI agents to operate their product reliably.
+- AI agent builders who need stable app actions instead of screen-scraping.
+- React, Flutter, and mobile teams exploring agent-ready UI architecture.
+- Teams designing safe automation for checkout, booking, support, CRM, internal tools, or marketplace workflows.
+- Researchers and founders working on computer-use agents, MCP-style tool systems, or app-control protocols.
+
+## What problem it solves
+
+Traditional computer-use agents are powerful, but fragile:
+
+- A button moving can break an automation.
+- Visual labels often hide business meaning.
+- Screenshots do not expose state, permissions, or risk.
+- Agents cannot reliably tell which actions need user confirmation.
+- Cross-app workflows are hard to compose safely.
+
+Agent Native App Framework moves that meaning into a developer-owned manifest so agents can inspect allowed actions before planning.
 
 ## What the framework describes
 
@@ -28,6 +54,22 @@ An app manifest can declare:
 - **Capabilities**: higher-level workflows composed from multiple actions.
 
 From that manifest, the SDK builds an action graph that an agent can inspect before planning a task.
+
+## Use cases
+
+- Let an AI assistant fill a cart, compare plans, or prepare checkout while requiring human approval for payment.
+- Let a support agent navigate an internal dashboard through typed actions instead of brittle selectors.
+- Let a mobile app expose safe agent actions for booking, ordering, scheduling, or navigation.
+- Let a workflow agent chain actions across compatible apps with explicit permission boundaries.
+- Let app teams publish machine-readable UI intent alongside normal React or Flutter code.
+
+## How it works
+
+1. Developers describe screens, elements, actions, state, and constraints.
+2. The SDK registers the app manifest and builds a graph of available actions.
+3. An agent planner reads the graph before choosing actions.
+4. Risky actions can require confirmation, permission scopes, or human approval.
+5. Future adapters can generate manifests from React components, Flutter widgets, or runtime state snapshots.
 
 ## First draft scope
 
