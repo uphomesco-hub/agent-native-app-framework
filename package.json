@@ -1,0 +1,38 @@
+{
+  "name": "agent-native-app-framework",
+  "version": "0.1.0",
+  "description": "A first-draft SDK for making apps operable by AI agents through semantic screens, actions, state, and constraints.",
+  "homepage": "https://github.com/uphomesco-hub/agent-native-app-framework#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uphomesco-hub/agent-native-app-framework.git"
+  },
+  "bugs": {
+    "url": "https://github.com/uphomesco-hub/agent-native-app-framework/issues"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [
+    "agents",
+    "ai-agents",
+    "app-framework",
+    "semantic-ui",
+    "action-graph",
+    "react",
+    "flutter"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}

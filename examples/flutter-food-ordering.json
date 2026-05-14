@@ -1,0 +1,57 @@
+{
+  "id": "demo-food-ordering",
+  "name": "Demo Food Ordering",
+  "version": "0.1.0",
+  "description": "A Flutter-style manifest that could be generated from widget annotations.",
+  "screens": [
+    {
+      "id": "restaurant",
+      "title": "Restaurant",
+      "purpose": "Show menu items from one restaurant.",
+      "route": "/restaurant/:id",
+      "elements": [
+        {
+          "id": "menu-item-card",
+          "kind": "card",
+          "purpose": "Expose one menu item, its modifiers, and add-to-cart action.",
+          "actions": [
+            {
+              "id": "add-menu-item",
+              "title": "Add menu item",
+              "description": "Add a selected item and modifiers to cart.",
+              "inputSchema": {
+                "itemId": "string",
+                "modifiers": ["string"]
+              },
+              "navigatesTo": "cart",
+              "risk": "medium"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "title": "Delivery",
+      "purpose": "Choose delivery address and instructions.",
+      "route": "/delivery",
+      "elements": [
+        {
+          "id": "share-address-with-map",
+          "kind": "button",
+          "label": "Open in maps",
+          "purpose": "Pass the delivery coordinates to a navigation app.",
+          "actions": [
+            {
+              "id": "handoff-to-maps",
+              "title": "Open route in maps",
+              "description": "Future cross-app handoff: send pickup/drop coordinates to a maps app action graph.",
+              "risk": "medium",
+              "requiresConfirmation": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
